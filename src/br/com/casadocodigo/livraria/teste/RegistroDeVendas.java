@@ -28,8 +28,7 @@ public class RegistroDeVendas {
 		
 		Produto[] produtos = carrinho.getProdutos();
 		
-		for (int i = 0; i < produtos.length; i++) {
-			Produto produto = produtos[i];
+		for (Produto produto : produtos) {
 			if (produto != null) {
 				System.out.println(produto.getValor());
 			}
