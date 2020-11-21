@@ -4,7 +4,7 @@ public class Autor {
 	private String nome;
 	private String email;
 	private String cpf;
-	
+
 	void mostrarDetalhes() {
 		System.out.println("Mostrando detalhes do autor ");
 		System.out.println("Nome: " + nome);
@@ -12,7 +12,7 @@ public class Autor {
 		System.out.println("CPF: " + cpf);
 		System.out.println("--");
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}

@@ -6,16 +6,16 @@ public class Livro {
 	private double valor;
 	private String isbn;
 	private Autor autor;
-	
+
 	public Livro(Autor autor) {
 		this();
 		this.autor = autor;
 	}
-	
+
 	public Livro() {
 		this.isbn = "000-00-00000-00-0";
 	}
-	
+
 	void mostrarDetalhes() {
 		System.out.println("Mostrando detalhes do livro ");
 		System.out.println("Nome: " + nome);
@@ -27,7 +27,7 @@ public class Livro {
 		}
 		System.out.println("--");
 	}
-	
+
 	public boolean aplicaDescontoDe(double porcentagem) {
 		if (porcentagem > 0.3) {
 			return false;
@@ -35,15 +35,15 @@ public class Livro {
 		this.valor -= this.valor * porcentagem;
 		return true;
 	}
-	
+
 	boolean temAutor() {
 		return this.autor != null;
 	}
-	
+
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-	
+
 	public double getValor() {
 		return this.valor;
 	}
