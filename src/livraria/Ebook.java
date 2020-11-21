@@ -1,11 +1,6 @@
 package livraria;
 
 public class Ebook extends Livro {
-	private String nome;
-	private String descricao;
-	private double valor;
-	private String isbn;
-	private Autor autor;
 	private String watermark;
 
 	public Ebook(Autor autor) {
