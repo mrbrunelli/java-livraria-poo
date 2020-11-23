@@ -21,6 +21,12 @@ public abstract class Livro implements Produto {
 	public Livro() {
 		this.isbn = "000-00-00000-00-0";
 	}
+	
+	@Override
+	public int compareTo(Produto outro) {
+		// TODO Auto-generated method stub
+		return (int) (this.getValor() - outro.getValor());
+	}
 
 	public void mostrarDetalhes() {
 		System.out.println("Mostrando detalhes do livro ");

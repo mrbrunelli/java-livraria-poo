@@ -7,7 +7,19 @@ public class Revista implements Produto, Promocional {
 	private String descricao;
 	private double valor;
 	private Editora editora;
-	
+
+	@Override
+	public int compareTo(Produto outro) {
+		// TODO Auto-generated method stub
+		if (this.getValor() < outro.getValor()) {
+			return -1;
+		}
+		if (this.getValor() > outro.getValor()) {
+			return 1;
+		}
+		return 0;
+	}
+
 	public boolean aplicaDescontoDe(double porcentagem) {
 		if (porcentagem > 0.1) {
 			return false;
@@ -16,30 +28,37 @@ public class Revista implements Produto, Promocional {
 		setValor(getValor() - desconto);
 		return true;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 	public String getDescricao() {
 		return descricao;
 	}
+
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+
 	public double getValor() {
 		return valor;
 	}
+
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
+
 	public Editora getEditora() {
 		return editora;
 	}
+
 	public void setEditora(Editora editora) {
 		this.editora = editora;
 	}
-	
+
 }
